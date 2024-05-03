@@ -33,7 +33,7 @@
             import gradio as gr
             from transformers_js_py import pipeline
     
-            pipe = await pipeline('ggml-org/gemma-1.1-2b-it-Q4_K_M-GGUF')
+            pipe = await pipeline('gemma-1.1-2b-it-Q4_K_M-GGUF')
     
             demo = gr.Interface.from_pipeline(pipe)
             
