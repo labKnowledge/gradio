@@ -26,14 +26,13 @@
 </head>
 <body>
     <div class="card" >
-        <img src="gradio.png" class="card-img-top" alt="">
         <div class="card-body">
-          <h5 class="card-title">Adding Files</h5>
+          <h5 class="card-title">This is Text Generator using google/gemma-2b</h5>
           <gradio-lite>
             import gradio as gr
             from transformers_js_py import pipeline
     
-            pipe = await pipeline("text-generation", model="google/gemma-1.1-7b-it")
+            pipe = await pipeline("text-generation", model="google/gemma-2b")
     
             demo = gr.Interface.from_pipeline(pipe)
             
