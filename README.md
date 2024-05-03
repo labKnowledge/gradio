@@ -6,9 +6,9 @@ This repository serves as a testing ground for experimenting with Gradio Lite, a
 
 ## Features
 
-- **Object Detection**: Implementations and examples of object detection models using Gradio Lite.
-- **Speech Recognition**: Demonstrations of speech recognition models integrated with Gradio Lite.
-- **Speech To Text**: Demonstrations of speech to with a different model models integrated with Gradio Lite.
+- **Object Detection**: Implementations and examples of object detection.
+- **Speech Recognition**: Demonstrations of speech recognition models.
+- **Text. To Speech**: Test Text to speech over the Browser.
 
 ## Usage
 
