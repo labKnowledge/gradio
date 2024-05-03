@@ -33,7 +33,7 @@
             import gradio as gr
             from transformers_js_py import pipeline
     
-            pipe = await pipeline('gemma-1.1-2b-it-Q4_K_M-GGUF')
+            pipe = await pipeline('automatic-speech-recognition')
     
             demo = gr.Interface.from_pipeline(pipe)
             
@@ -47,7 +47,5 @@
         </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
-        
 </body>
 </html>
