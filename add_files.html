@@ -33,7 +33,7 @@
             import gradio as gr
             from transformers_js_py import pipeline
     
-            pipe = await pipeline('mlc-ai/stablelm-zephyr-3b-q0f16-MLC')
+            pipe = await pipeline('mlc-ai/stablelm-zephyr-3b-q4f32_1-MLC')
     
             demo = gr.Interface.from_pipeline(pipe)
             
