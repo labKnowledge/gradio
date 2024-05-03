@@ -31,18 +31,23 @@
           <h5 class="card-title">Adding Files</h5>
           <gradio-lite>
 
-            <gradio-file name="app.py" entrypoint>
-                import gradio as gr
-                from utils import add
-                
-                demo = gr.Interface(fn=add, inputs=["number", "number"], outputs="number")
-                
-                demo.launch()
-            </gradio-file>
+            <gradio-requirements>
+            transformers_js_py
+            </gradio-requirements>
             
-            <gradio-file name="utils.py" >
-            def add(a, b):
-                return a + b
+            <gradio-file name="app.py" entrypoint>
+            from transformers_js import import_transformers_js
+            import gradio as gr
+            
+            transformers = await import_transformers_js()
+            pipeline = transformers.pipeline
+            pipe = await pipeline('sentiment-analysis')
+            
+            async def classify(text):
+                return await pipe(text)
+            
+            demo = gr.Interface(classify, "textbox", "json")
+            demo.launch()
             </gradio-file>
             
             </gradio-lite>
