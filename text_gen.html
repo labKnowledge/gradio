@@ -32,7 +32,7 @@
             import gradio as gr
             from transformers_js_py import pipeline
     
-            pipe = await pipeline("text-generation", model="google/gemma-2b")
+            pipe = await pipeline('object-detection', 'Xenova/detr-resnet-50')
     
             demo = gr.Interface.from_pipeline(pipe)
             
