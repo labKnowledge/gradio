@@ -30,27 +30,20 @@
         <div class="card-body">
           <h5 class="card-title">Adding Files</h5>
           <gradio-lite>
-
-            <gradio-requirements>
-            transformers_js_py
-            </gradio-requirements>
-            
-            <gradio-file name="app.py" entrypoint>
-            from transformers_js import import_transformers_js
             import gradio as gr
+            from transformers_js_py import pipeline
+    
+            pipe = await pipeline('mlc-ai/stablelm-zephyr-3b-q0f16-MLC')
+    
+            demo = gr.Interface.from_pipeline(pipe)
             
-            transformers = await import_transformers_js()
-            pipeline = transformers.pipeline
-            pipe = await pipeline('sentiment-analysis')
-            
-            async def classify(text):
-                return await pipe(text)
-            
-            demo = gr.Interface(classify, "textbox", "json")
             demo.launch()
-            </gradio-file>
-            
+    
+                        <gradio-requirements>
+            transformers-js-py
+                        </gradio-requirements>
             </gradio-lite>
+    
         </div>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
