@@ -55,7 +55,7 @@
 						import gradio as gr
 						from transformers_js_py import pipeline
 				
-						pipe = await pipeline('text-generation', 'Xenova/distilgpt2')
+						pipe = await pipeline('text-generation', 'Xenova/codegen-350M-mono')
 				
 						app = gr.Interface.from_pipeline(pipe)
 						
