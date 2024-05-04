@@ -45,8 +45,13 @@
 				<div class="card" >
 					<div class="card-body">
 					  <h5 class="card-title">Text to Speech</h5>
-					  <p>Copy the following to Speaker Embeddings</p>
-					  <input type="text" class="form-control" value="https://huggingface.co/datasets/Xenova/cmu-arctic-xvectors-extracted/resolve/main/cmu_us_jmk_arctic-wav-arctic_a0002.bin" >
+					  <div class="input-group mb-3">
+						<div class="input-group-prepend">
+						  <span class="input-group-text" id="basic-addon3">Copy to Speaker Embeddings</span>
+						</div>
+						<input type="text" class="form-control" value="https://huggingface.co/datasets/Xenova/cmu-arctic-xvectors-extracted/resolve/main/cmu_us_jmk_arctic-wav-arctic_a0002.bin" >
+
+					  </div>
 					  <gradio-lite>
 						import gradio as gr
 						from transformers_js_py import pipeline
